@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Democracy Resort - Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-image: url('static/images/bg.jpg');">
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+    </div>
+
+    <div class="hero">
+        <h1>Welcome to Democracy Resort</h1>
+        <p>Relax. Rejuvenate. Refresh.</p>
+    </div>
+
+    <div class="slideshow-container">
+        <img class="slides" src="{% static 'images/resort2.jpg' %}">
+        <img class="slides" src="{% static 'images/resort4.jpg' %}">
+        <img class="slides" src="{% static 'images/resort5.jpg' %}">
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slides");
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+
+</body>
+</html>
