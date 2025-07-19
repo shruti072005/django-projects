@@ -1,0 +1,73 @@
+{% extends 'events/base.html' %}
+{% block content %}
+<style>
+  body {
+    background: url('https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.85);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .event-detail-card, .event-detail-card * {
+    position: relative;
+    z-index: 1;
+  }
+  .event-detail-card {
+    max-width: 520px;
+    margin: 36px auto 0 auto;
+    background: #fff;
+    padding: 36px 32px 28px 32px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+    transition: box-shadow 0.3s;
+    position: relative;
+  }
+  .event-detail-card h2 {
+    margin-top: 0;
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+  .event-detail-card p {
+    font-size: 1.08rem;
+    margin: 12px 0;
+    color: #222;
+  }
+  .event-detail-card strong {
+    color: #217dbb;
+    font-weight: 600;
+  }
+  .event-detail-card .btn {
+    margin-top: 24px;
+    width: 100%;
+    font-size: 1.08rem;
+    padding: 12px 0;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 600px) {
+    .event-detail-card {
+      padding: 14px 4vw 14px 4vw;
+    }
+    .event-detail-card h2 {
+      font-size: 1.3rem;
+    }
+  }
+</style>
+<div class="event-detail-card">
+  <h2>{{ event.name }}</h2>
+  <p><strong>Date:</strong> {{ event.date }}</p>
+  <p><strong>Time:</strong> {{ event.time }}</p>
+  <p><strong>Location:</strong> {{ event.location }}</p>
+  <p><strong>Description:</strong> {{ event.description }}</p>
+  <a href="{% url 'event_list' %}" class="btn btn-success">Back</a>
+</div>
+{% endblock %}
