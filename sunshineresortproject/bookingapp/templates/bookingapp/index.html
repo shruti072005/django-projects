@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine Resort</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+            min-height: 100vh;
+        }
+        .header {
+            background: rgba(255,255,255,0.85);
+            padding: 40px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #ff4e50;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .header p {
+            font-size: 1.3rem;
+            color: #333;
+            margin-top: 10px;
+        }
+        .main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 32px;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        .feature {
+            flex: 1 1 220px;
+            background: #fff7e6;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(255, 78, 80, 0.08);
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .feature:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 6px 24px rgba(255, 78, 80, 0.15);
+        }
+        .feature h2 {
+            color: #f9d423;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #444;
+            font-size: 1rem;
+        }
+        .cta {
+            display: block;
+            width: fit-content;
+            margin: 32px auto 0 auto;
+            padding: 14px 36px;
+            background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            transition: background 0.2s, transform 0.2s;
+            text-decoration: none;
+        }
+        .cta:hover {
+            background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 700px) {
+            .main {
+                padding: 16px;
+            }
+            .features {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sunshine Resort</h1>
+        <p>Experience luxury, comfort, and adventure at the best resort in town!</p>
+    </div>
+    <div class="main">
+        <h2 style="text-align:center; color:#ff4e50;">Welcome to Paradise</h2>
+        <div class="features">
+            <div class="feature">
+                <h2>Luxury Rooms</h2>
+                <p>Relax in our spacious, beautifully designed rooms with stunning views and premium amenities.</p>
+            </div>
+            <div class="feature">
+                <h2>Fine Dining</h2>
+                <p>Enjoy gourmet cuisine from around the world at our award-winning restaurants and bars.</p>
+            </div>
+            <div class="feature">
+                <h2>Activities & Spa</h2>
+                <p>Unwind at our spa or join exciting activities like water sports, yoga, and guided tours.</p>
+            </div>
+            <div class="feature">
+                <h2>Family Friendly</h2>
+                <p>Fun for all ages with kids’ clubs, pools, and entertainment for the whole family.</p>
+            </div>
+        </div>
+        <a href="/booking" class="cta">Book Your Stay</a>
+    </div>
+</body>
+</html>
