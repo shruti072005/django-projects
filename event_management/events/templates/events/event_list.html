@@ -1,7 +1,9 @@
 {% extends 'events/base.html' %}
 {% load static %}
 {% block content %}
+
 <style>
+  
   body {
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
     background-size: cover;
@@ -64,10 +66,12 @@
     }
   }
 </style>
+<div  class="search-form" style="text-align:center; margin-bottom: 18px; font-size:1.13rem; color:#2d3e50; font-weight: 500; letter-spacing: 0.1px;">
+  <h1>Event Management System</h1> 
+</div>
 
-
-<div style="text-align:center; margin-bottom: 18px; font-size:1.13rem; color:#2d3e50; font-weight: 500; letter-spacing: 0.1px;">
-  Welcome to the Event Booking System! Effortlessly browse, search, and manage your events. Book new events, edit details, or remove events as needed—all in one place.
+<div  class="table-wrapper" style="text-align:center; margin-bottom: 18px; font-size:1.13rem; color:#2d3e50; font-weight: 500; letter-spacing: 0.1px;">
+  <strong>Welcome to the Event Booking System!</strong> Effortlessly browse, search, and manage your events. Book new events, edit details, or remove events as needed—all in one place.
 </div>
 
 <a href="{% url 'add_event' %}" class="btn btn-success">Book New Event</a><br><br>
@@ -80,6 +84,7 @@
 </form>
 
 <div class="table-wrapper">
+  
   <table class="event-table">
       <thead>
           <tr>

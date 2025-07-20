@@ -3,7 +3,7 @@
 <style>
   
   body {
-    background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background: url('https://as1.ftcdn.net/v2/jpg/07/33/50/26/1000_F_733502690_GYuQrHyM4W7xxhRW0UPGrySJxJoRnNz4.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     min-height: 100vh;
@@ -76,7 +76,11 @@
   
 </style>
 <div class="event-form-wrapper">
+  
   <form method="POST">
+      <h1 style="text-align: center;">Event Management System</h1>
+      <h2 style="text-align: center;">Create or Edit Event</h2>
+      
       {% csrf_token %}
       {{ form.as_p }}
       <button type="submit" class="btn btn-success">Save Event</button>
