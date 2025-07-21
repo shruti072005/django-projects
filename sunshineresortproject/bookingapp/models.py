@@ -8,7 +8,6 @@ class Booking(models.Model):
         ('suite', 'Suite'),
         ('family', 'Family Room'),
     ]
-   
     name = models.CharField(max_length=100)
     email = models.EmailField()
     checkin = models.DateField()
@@ -18,5 +17,4 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.roomtype}) from {self.checkin} to {self.checkout}"
- 
  

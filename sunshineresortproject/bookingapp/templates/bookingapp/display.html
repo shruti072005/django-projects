@@ -92,6 +92,7 @@
                     <th>Check-out</th>
                     <th>Room Type</th>
                     <th>Guests</th>
+                    <th>actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -103,7 +104,11 @@
                     <td>{{ booking.checkout }}</td>
                     <td>{{ booking.roomtype }}</td>
                     <td>{{ booking.guests }}</td>
-                </tr>
+
+                   <td>
+                <a href="{% url 'update' booking.id %}" class="btn">Update</a>
+                <a href="{% url 'delete' booking.id %}" class="btn">Delete</a></td>
+                </tr>              
                 {% empty %}
                 <tr>
                     <td colspan="6" style="text-align:center; color:#ff4e50;">No bookings found.</td>
@@ -115,3 +120,4 @@
     </div>
 </body>
 </html>
+    

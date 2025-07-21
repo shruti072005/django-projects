@@ -32,3 +32,25 @@ def bookingview(request):
 def displayview(request):
     bookings = Booking.objects.all()
     return render(request, 'bookingapp/display.html', {'bookings': bookings})
+
+def updateview(request,id):
+    booking = Booking.objects.get(id=id)
+    if request.method == 'POST':
+        booking.name = request.POST.get('name')
+        booking.email = request.POST.get('email')
+        booking.checkin = request.POST.get('checkin')
+        booking.checkout = request.POST.get('checkout')
+        booking.roomtype = request.POST.get('roomtype')
+        booking.guests = request.POST.get('guests')
+        booking.save()
+        return redirect('display')
+    return render(request, 'bookingapp/update.html', {'booking': booking})
+
+def deleteview(request, id):
+    booking = Booking.objects.get(id=id)
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('display')
+    return render(request, 'bookingapp/delete.html', {'booking': booking})
+    
+
