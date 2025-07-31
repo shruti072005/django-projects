@@ -1,14 +1,16 @@
 
 from django.contrib import admin
 from django.urls import path
-from bookingapp.views import *
+from bookingapp.views import BookingViews
 
+views = BookingViews()
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',homeview, name='home'),
-    path('booking/', bookingview, name='booking'),
-    path('display/', displayview, name='display'),
-    path('update/<int:id>/', updateview, name='update'),
-    path('delete/<int:id>/', deleteview, name='delete'),
+    path('index/', views.home, name='home'),
+    path('booking/', views.create, name='booking'),
+    path('display/', views.display, name='display'),
+    path('update/<int:pk>/', views.update, name='update'),
+    path('delete/<int:pk>/', views.delete, name='delete'),
 ]
    
+  
